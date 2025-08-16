@@ -1,0 +1,16 @@
+from math import *
+t = int(input())
+while t > 0:
+    s = input()
+    a = []
+    for c in s:
+        a.append(int(c))
+    for i in range(len(a) - 1, 0, -1):
+        a[i] = int(a[i])
+        if a[i] >= 5:
+            a[i - 1] += 1
+        a[i] = 0
+    for x in a:
+        print(x,end = "")
+    print()
+    t -= 1
