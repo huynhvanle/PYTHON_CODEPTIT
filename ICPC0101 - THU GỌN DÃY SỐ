@@ -1,0 +1,13 @@
+from math import *
+n = int(input())
+a = [int(x) for x in input().split()]
+b = []
+for i in range(0,n):
+    if(not len(b)):
+        b.append(a[i])
+    else:
+        if(a[i] + b[len(b) - 1]) % 2 == 0:
+            b.pop()
+        else:
+            b.append(a[i])
+print(len(b))
