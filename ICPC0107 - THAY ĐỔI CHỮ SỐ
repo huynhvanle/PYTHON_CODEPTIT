@@ -1,0 +1,16 @@
+from math import *
+from collections import deque
+t = int(input())
+while t > 0:
+    t -= 1
+    a,b = input().split()
+    s = input().split()
+    if len(s) > 1:
+        x1 = s[0]
+        x2 = s[1]
+    else:
+        x1 = s[0]
+        x2 = input()
+    rs = int(x1.replace(a,b)) + int(x2.replace(a,b))
+    rs2 = int(x1.replace(b,a)) + int(x2.replace(b,a))
+    print(min(rs,rs2),max(rs,rs2), sep = " ")
