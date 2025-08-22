@@ -1,0 +1,23 @@
+from math import *
+from collections import deque
+t = int(input())
+while t > 0:
+    t -= 1
+    sw = int(input())
+    binary = input()
+    n = len(binary) - 1
+    if sw == 2:
+        print(binary)
+    else:
+        num = int(binary,2)
+        rs = ""
+        if sw == 8:
+            rs = oct(num)[2:]
+        elif sw == 16:
+            rs = hex(num)[2:].upper()
+        else:
+            while num > 0:
+                rs += str(int(num % sw))
+                num //= sw
+            rs = rs[::-1]
+        print(rs)
