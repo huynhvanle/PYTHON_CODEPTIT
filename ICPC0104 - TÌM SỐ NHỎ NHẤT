@@ -1,0 +1,17 @@
+from math import *
+from collections import deque
+t = int(input())
+while(t > 0):
+    t -= 1
+    s = input()
+    s += 'a'
+    component = ""
+    a = []
+    for c in s:
+        if c.isnumeric():
+            component += c
+        else:
+            if component != "":
+                a.append(int(component))
+            component = ""
+    print(min(a))
