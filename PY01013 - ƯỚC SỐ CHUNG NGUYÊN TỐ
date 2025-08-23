@@ -1,0 +1,16 @@
+from math import *
+from collections import deque
+def prime(n):
+    if n <= 1: return 0
+    for i in range(2,int(sqrt(n) + 1)):
+        if n % i == 0:
+            return 0
+    return 1
+for t in range(int(input())):
+    a, b = map(int,input().split())
+    GCD = str(gcd(a,b))
+    sumd = sum([int(c) for c in GCD])
+    if prime(sumd):
+        print("YES")
+    else:
+        print("NO")
