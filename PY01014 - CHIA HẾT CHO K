@@ -1,0 +1,12 @@
+from math import *
+from collections import deque
+a, k, n = map(int,input().split())
+st = k
+dg = 0
+while st <= a:
+    st += k
+for i in range(st,n + 1,k):
+   dg = 1
+   print(i - a, end = " ")
+if not dg:
+    print(-1)
