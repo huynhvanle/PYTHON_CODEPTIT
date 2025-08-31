@@ -1,0 +1,65 @@
+from math import *
+for t in range(int(input())):
+    d,m = map(int,input().split())
+    rs = ""
+    if m == 1:
+        if d <= 19:
+            rs = "Ma Ket"
+        else:
+            rs = "Bao Binh"
+    elif m == 2:
+        if d <= 18:
+            rs = "Bao Binh"
+        else:
+            rs = "Song Ngu"
+    elif m == 3:
+        if d <= 20:
+            rs = "Song Ngu"
+        else:
+            rs = "Bach Duong"
+    elif m == 4:
+        if d <= 19:
+            rs = "Bach Duong"
+        else:
+            rs = "Kim Nguu"
+    elif m == 5:
+        if d <= 20:
+            rs = "Kim Nguu"
+        else:
+            rs = "Song Tu"
+    elif m == 6:
+        if d <= 20:
+            rs = "Song Tu"
+        else:
+            rs = "Cu Giai"
+    elif m == 7:
+        if d <= 22:
+            rs = "Cu Giai"
+        else:
+            rs = "Su Tu"
+    elif m == 8:
+        if d <= 22:
+            rs = "Su Tu"
+        else:
+            rs = "Xu Nu"
+    elif m == 9:
+        if d <= 22:
+            rs = "Xu Nu"
+        else:
+            rs = "Thien Binh"
+    elif m == 10:
+        if d <= 22:
+            rs = "Thien Binh"
+        else:
+            rs = "Thien Yet"
+    elif m == 11:
+        if d <= 22:
+            rs = "Thien Yet"
+        else:
+            rs = "Nhan Ma"
+    elif m == 12:
+        if d <= 21:
+            rs = "Nhan Ma"
+        else:
+            rs = "Ma Ket"
+    print(rs)
