@@ -1,0 +1,8 @@
+from math import *
+for t in range(int(input())):
+    s = input();
+    rs = ""
+    for i in range(len(s)):
+        if (s[i].isnumeric()):
+            rs += s[i - 1] * int(s[i])
+    print(rs)
