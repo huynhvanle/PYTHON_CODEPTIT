@@ -1,0 +1,13 @@
+from math import *
+p = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ_.'
+
+while(1):
+    lis = list(map(str, input().split()))
+    if len(lis) == 1:
+        break
+    s = lis[1]
+    k = int(lis[0])
+    for i in range(len(s)):
+        j =  p.index(s[i])
+        s = s[:i] + p[(j + k) % 28] + s[i + 1:]
+    print(s[::-1])
