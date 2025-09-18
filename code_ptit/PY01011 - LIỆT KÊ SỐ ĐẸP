@@ -1,0 +1,19 @@
+from math import *
+def check(n):
+    s = str(n)
+    if s != s[::-1]:
+        return False
+    se = set()
+    for c in s:
+        if c not in "02468":
+            return False
+        se.add(c)
+    if len(s) % 2 != 0:
+        return False
+    return True
+for t in range(int(input())):
+    n = int(input())
+    for i in range(22,n,2):
+        if check(i):
+            print(i, end = ' ')
+    print()
