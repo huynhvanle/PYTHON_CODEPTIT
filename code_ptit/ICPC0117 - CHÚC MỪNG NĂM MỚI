@@ -1,0 +1,5 @@
+from math import *
+se = set()
+for t in range(int(input())):
+    se.add(input())
+print(len(se))
