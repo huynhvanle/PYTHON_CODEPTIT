@@ -1,0 +1,12 @@
+from math import *
+for t in range(int(input())):
+    n = int(input())
+    s = 0
+    tmp = n
+    while tmp > 0:
+        s += factorial(tmp % 10)
+        tmp //= 10
+    if s == n:
+        print("Yes")
+    else:
+        print("No")
