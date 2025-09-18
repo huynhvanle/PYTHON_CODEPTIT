@@ -1,4 +1,0 @@
-from math import *
-a = input().split()
-for s in a:
-    print(s)
