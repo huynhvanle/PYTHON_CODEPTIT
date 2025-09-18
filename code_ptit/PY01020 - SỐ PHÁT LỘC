@@ -1,0 +1,12 @@
+from math import *
+def check(s):
+    if len(s) < 2: return False
+    if s[-1] != '6' or s[-2] != '8':
+        return False
+    return True
+for t in range(int(input())):
+    s = input();
+    if check(s):
+        print("YES")
+    else:
+        print("NO")
