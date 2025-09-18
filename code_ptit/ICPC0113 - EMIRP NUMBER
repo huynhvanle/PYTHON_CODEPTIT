@@ -1,0 +1,20 @@
+from math import *
+from collections import deque
+a = [1] * 1000006
+def sieve():
+    a[0] = a[1] = 0
+    for i in range(2, int(sqrt(1000006))):
+        if a[i]:
+            for j in range(i * i, 1000006, i):
+                a[j] = 0
+sieve()
+for t in range(int(input())):
+    n = int(input())
+    check = []
+    for i in range(11,n):
+        if a[i]:
+            j = int(str(i)[::-1])
+            if a[j] and j != i and j < n and i not in check:
+                print(i,j, sep = " ", end = " ")
+                check.append(j)
+    print()
