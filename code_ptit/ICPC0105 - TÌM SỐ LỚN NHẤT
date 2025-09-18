@@ -1,0 +1,17 @@
+from math import *
+from collections import deque
+t = int(input())
+while t > 0:
+    t -= 1
+    s = input()
+    s += 'a'
+    a = []
+    num = ""
+    for c in s:
+        if c.isnumeric():
+            num += c
+        else:
+            if num != "":
+                a.append(int(num))
+            num = ""
+    print(max(a))
