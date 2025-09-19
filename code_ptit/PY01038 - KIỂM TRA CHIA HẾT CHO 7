@@ -1,0 +1,20 @@
+from math import *
+def checkDiv7(s):
+    total = 0
+    for c in  s:
+        total += int(c) * 3
+    if total % 7 == 0:
+        return True
+    return False
+for t in range(int(input())):
+    n = int(input())
+    ok = False
+    for i in range(1000):
+        if n % 7 == 0:
+            ok = True
+            break
+        n += int(str(n)[::-1])
+    if(ok):
+        print(n)
+    else:
+        print(-1)
